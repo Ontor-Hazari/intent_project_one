@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     EditText value_text;
-    Button button;
+    Button button,button4;
     TextView show_text;
 
     @Override
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         value_text = (EditText) findViewById(R.id.value_text);
          button = (Button) findViewById(R.id.button);
+         button4 = (Button)  findViewById(R.id.button4);
          show_text = (TextView) findViewById(R.id.show_text);
 
 
@@ -42,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+             }
+         });
+
+         button4.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+
+                 Intent intent3 = new Intent(MainActivity.this,ArrayIntent.class);
+                 startActivity(intent3);
              }
          });
 
